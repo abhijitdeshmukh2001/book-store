@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Display</title>
+</head>
+<body>
+    <nav>
+        <li><a href="/add">add book</a></li>
+        <li><a href="/getbook">get book</a></li>
+        <li><a href="/">all books</a></li>
+    </nav>
+<h1>hallo user</h1>
+    <h1>hear is all avalebale booksin the store</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>writwr</th>
+            <th>pages</th>
+            <!-- Add more table headers as needed -->
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <!-- Access other columns in the same way (e.g., row[2], row[3], etc.) -->
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
